@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,6 +10,7 @@ export const Profile = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(lookupUser(email))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[] )
 
     useEffect(() => {
