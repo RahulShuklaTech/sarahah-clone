@@ -32,7 +32,6 @@ export const toggleLoading = (data) => {
 export const lookupUser =  (email) => { 
     return async(dispatch, getState) => {
         let username =  await getUsernameFromDatatbase(email);
-        console.log("name", username)
         dispatch(setProfileUsername(username));
     }
 }
@@ -48,7 +47,6 @@ export const getFeedbacksFromDB = (username) => {
             result.push(obj)
         })
         dispatch(setFeedbacks(result));
-        console.log(result,"result is here")
     }
 }
 

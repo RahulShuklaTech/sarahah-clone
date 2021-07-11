@@ -29,7 +29,6 @@ export const Profile = () => {
                             <div key={index} className = "feedback">
                                 <h2>{feedback.feedback}</h2>
                                 <p>Date: {feedback.date && feedback.date.toDate().toLocaleDateString()}</p>
-                                {feedback.date && console.log(`date`, feedback.date.toDate().toLocaleDateString())}
                             </div>
                         )
                     })

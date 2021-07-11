@@ -47,7 +47,6 @@ export const Signup = () => {
                         break;
                     case "auth/weak-password":
                         dispatch(setPasswordError(err.message));
-                        console.log("error",err.message)
                         error = true;
                         break;
                     default:
@@ -55,7 +54,6 @@ export const Signup = () => {
                 }
             }).finally(() => { 
                 if (!error) {
-                    console.log("success")
                     dispatch(addUserToDB(username,email))
                     history.push("/login")
                 }

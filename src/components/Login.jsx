@@ -38,7 +38,6 @@ export const Login = () => {
             }).finally(() => { 
                 
                 if(!error){
-                    console.log("success is wonderful")
                     history.push("/profile")
                 }
             })
