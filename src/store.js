@@ -1,8 +1,14 @@
-import {applyMiddleware, createStore} from "redux";
-import {logger} from "redux-logger/src";
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import {logger} from "redux-logger";
 import thunk from "redux-thunk";
-import counterReducer from "./reducers/counterReducer";
+import authReducer from "./reducers/authReducer";
+import profileReducer from "./reducers/profileReducer";
+
+const rootReducer = combineReducers({
+    auth: authReducer,
+    profile: profileReducer
+});
 
 const middleware = [thunk, logger];
 
-export const store = createStore(counterReducer, applyMiddleware(...middleware));
+export const store = createStore(rootReducer, applyMiddleware(...middleware));
