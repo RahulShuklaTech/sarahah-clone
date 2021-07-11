@@ -17,7 +17,7 @@ export const Profile = () => {
         dispatch(getFeedbacksFromDB(username))
     },[username])
     return (
-        <div className="container">
+        <div className="container2">
             <div className="header">
                 <img src = "avatar.png" alt = "user" className="avatar"/>
                 <h1>{username}</h1>
