@@ -12,9 +12,6 @@ export default function Main() {
                <Route exact path="/signup" component={Signup}/>
                <Route exact path="/profile" component={Profile}/>
                <Route exact path="/feedback/:username" component = {Feedback}/>
-
-                    
-               
            </Switch>
         </div>
     )

@@ -55,7 +55,7 @@ export const Signup = () => {
             }).finally(() => { 
                 if (!error) {
                     dispatch(addUserToDB(username,email))
-                    history.push("/login")
+                    history.push("/")
                 }
                 
                 
